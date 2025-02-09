@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@551&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.mainMenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 2;
+}
+.menuBlock{
+    margin: 10px 15px;
+    background-color: white;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 2;
+}
+.menuBlock:hover{
+    border: 2px solid #FF4500;
+    z-index: 2;
+}
+.menuBlock a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+    z-index: 2;
+}
+.menuBlock a:hover {
+    color: #FF4500;
+    z-index: 2;
+}
+.menuBlock1{
+    margin: 10px 15px;
+    background-color: white;
+    border: 2px solid #FF4500;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 2;
+}
+.menuBlock1:hover{
+    border: 2px solid #FF4500;
+    z-index: 2;
+}
+.menuBlock1 a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FF4500;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+    z-index: 2;
+}
+.menuBlock1 a:hover {
+    color: #FF4500;
+    z-index: 2;
+}
+
+
+
+
+/* main */
+
+
+
+.backgroundabout{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/briborkabmw.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.introTechPhrase{
+    font-size: 30px;
+    color: #f1eded;
+    font-weight: 600;
+    margin-top: 1.5%;
+}
+.introTechText{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.34;
+    color: #f1eded;
+    padding: 10px;
+    background-color: #0000009a;
+    border-radius: 10px; 
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+.techInfoArt{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.techInfo{
+    position: relative;
+    margin-left: 1%;
+    font-family: "Open Sans", serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.34;
+    align-items: center;
+    color: black;
+}
+
+.absGif{
+    width: 10%;
+    transition: 1s;
+}
+.absGif:hover{
+    transform: scale(1.2);
+}
+
+
+.techInfos{
+    margin-top: 30px;
+}
+
+
+
+
+
+
+
+/* footer */
+
+
+
+footer{
+    text-align: center;
+    background-color: #FF4500;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 2px solid #555;
+}
+
+footer p{
+    margin: 0;
+}
+
+.themeButton{
+    margin-top: 1vh;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #ffffff;
+    background-color: #a83106;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s, transform 0.1s; 
+}
+
+.themeButton:hover{
+    background-color: #722103;
+    transform: translateY(-1px); 
+}
+
+.themeButton:active{
+    background-color: #ff4400;
+    transform: translateY(1px);
+}
+
+
+
+
+
+/* светлая тема */
+
+
+
+
+.lightTheme main{
+    background-color: white;
+}
+
+
+
+.lightTheme .techInfo{
+    position: relative;
+    margin-left: 1%;
+    font-family: "Open Sans", serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.34;
+    align-items: center;
+    color: black;
+}
+
+
+
+/* темная тема */
+
+.darkTheme main{
+    background-color: #1a1a1a;
+}
+
+.darkTheme .themeButton{
+    margin-top: 1vh;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #1a1a1a;
+}
+
+
+.darkTheme main{
+    background-color: #1a1a1a;
+}
+
+
+.darkTheme .themeButton{
+    margin-top: 1vh;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #ffffff;
+    background-color: #a83106;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s, transform 0.1s; 
+}
+
+.darkTheme .themeButton:hover{
+    background-color: #722103;
+    transform: translateY(-1px);
+}
+
+.darkTheme .themeButton:active{
+    background-color: #ff4400;
+    transform: translateY(1px);
+}
+
+
+
+.darkTheme .mainMenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 2;
+}
+.darkTheme .menuBlock{
+    margin: 10px 15px;
+    background-color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 2;
+}
+.darkTheme .menuBlock:hover{
+    border: 2px solid #FF4500;
+    z-index: 2;
+}
+.darkTheme .menuBlock a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #CCCCCC;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+    z-index: 2;
+}
+.darkTheme .menuBlock a:hover {
+    color: #FF4500;
+    z-index: 2;
+}
+.darkTheme .menuBlock1{
+    margin: 10px 15px;
+    background-color: #1a1a1a;
+    border: 2px solid #FF4500;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 2;
+}
+
+
+
+
+.techInfo{
+    position: relative;
+    margin-left: 1%;
+    font-family: "Open Sans", serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.34;
+    align-items: center;
+    color: rgb(221, 221, 221);
+}

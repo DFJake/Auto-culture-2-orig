@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@551&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.mainMenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 2;
+}
+.menuBlock{
+    margin: 10px 15px;
+    background-color: white;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 2;
+}
+.menuBlock:hover{
+    border: 2px solid #FF4500;
+    z-index: 2;
+}
+.menuBlock a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+    z-index: 2;
+}
+.menuBlock a:hover {
+    color: #FF4500;
+    z-index: 2;
+}
+.menuBlock1{
+    margin: 10px 15px;
+    background-color: white;
+    border: 2px solid #FF4500;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 2;
+}
+.menuBlock1:hover{
+    border: 2px solid #FF4500;
+    z-index: 2;
+}
+.menuBlock1 a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FF4500;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+    z-index: 2;
+}
+.menuBlock1 a:hover {
+    color: #FF4500;
+    z-index: 2;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* скрываем чекбокс и убираем его из потока документа */
+#menu__toggle {
+    opacity: 0;
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+}
+
+/* стилизуем кнопку */
+.menu__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    z-index: 51;
+    cursor: pointer;
+}
+
+/* гамбургер */
+.menu__btn > span,
+.menu__btn > span::before,
+.menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background-color: #FF4500;
+    transition: 0.3s;
+    z-index: 51;
+}
+
+.menu__btn > span::before {
+    content: '';
+    top: -8px;
+}
+
+.menu__btn > span::after {
+    content: '';
+    top: 8px;
+}
+
+/* контейнер меню */
+.menu__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: -100%;
+    width: 270px;
+    height: 100%;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    transition: 0.3s;
+    z-index: 50;
+}
+
+/* элементы меню */
+.menu__item {
+    display: block;
+    color: #333;
+    padding: 12px 24px;
+    text-decoration: none;
+}
+
+.menu__item:hover {
+    background-color: #CFD8DC;
+}
+
+/* анимация открытия меню */
+#menu__toggle:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+}
+
+#menu__toggle:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    left: 0;
+}
+
+
+
+
+
+
+
+/* main */
+
+
+
+.backgroundabout{
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(../images/germanyautoculture.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstText{
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Open Sans", serif;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 1.34;
+    color: #f1eded;
+    padding: 10px;
+    background-color: #8b888823;
+    border-radius: 10px; 
+    text-align: center;
+    margin: 0 auto;
+}
+
+.autoCulturephrase{
+    font-size: 30px;
+    color: #f1eded;
+    font-weight: 600;
+    margin-top: 1.5%;
+}
+
+
+
+
+/*  Постеры популярных конкуренций   */
+
+
+
+
+
+
+
+.compArt{
+    width: 100%;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+.competition{
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    margin: 50px;
+}
+
+
+.compBoards{
+    position: relative;
+    width: 300px;
+    height: auto;
+    overflow: hidden;
+    cursor: pointer;
+    background-color: white;
+}
+
+.compBoardsImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.compBoardsTxt{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.compBoardsTxt:hover {
+    opacity: 1;
+}
+
+
+
+
+
+
+
+
+/* footer */
+
+
+
+footer{
+    text-align: center;
+    background-color: #FF4500;
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+    border-top: 2px solid #555;
+}
+
+footer p{
+    margin: 0;
+}
+
+.themeButton{
+    margin-top: 1vh;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #ffffff;
+    background-color: #a83106;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s, transform 0.1s; 
+}
+
+.themeButton:hover{
+    background-color: #722103;
+    transform: translateY(-1px); 
+}
+
+.themeButton:active{
+    background-color: #ff4400;
+    transform: translateY(1px);
+}
+
+
+
+
+
+/* светлая тема */
+
+
+
+
+.lightTheme main{
+    background-color: white;
+}
+
+
+
+.lightTheme .techInfo{
+    position: relative;
+    margin-left: 1%;
+    font-family: "Open Sans", serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.34;
+    align-items: center;
+    color: black;
+}
+
+
+
+
+
+/* темная тема */
+
+.darkTheme main{
+    background-color: #222020;
+}
+
+.darkTheme html{
+    background-color: #222020;
+}
+
+
+.darkTheme {
+    background-color: #222020;
+}
+
+
+.darkTheme .themeButton{
+    margin-top: 1vh;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #1a1a1a;
+}
+
+
+
+.darkTheme .themeButton{
+    margin-top: 1vh;
+    background-color: white;
+    border-radius: 5px;
+    border-color: #ffffff;
+    background-color: #a83106;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s, transform 0.1s; 
+}
+
+.darkTheme .themeButton:hover{
+    background-color: #722103;
+    transform: translateY(-1px); 
+}
+
+.darkTheme .themeButton:active{
+    background-color: #ff4400;
+    transform: translateY(1px);
+}
+
+
+
+
+.darkTheme .compArt{
+    background-color: #222020;
+}
+
+.darkTheme body{
+    background-color: #222020;
+}
+
+
+
+
+
+
+
+
+.darkTheme .mainMenu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    padding-top: 20px;
+    overflow-y: auto;
+    z-index: 2;
+}
+.darkTheme .menuBlock{
+    margin: 10px 15px;
+    background-color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 2;
+}
+.darkTheme .menuBlock:hover{
+    border: 2px solid #FF4500;
+    z-index: 2;
+}
+.darkTheme .menuBlock a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #CCCCCC;
+    padding: 10px 15px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+    z-index: 2;
+}
+.darkTheme .menuBlock a:hover {
+    color: #FF4500;
+    z-index: 2;
+}
+.darkTheme .menuBlock1{
+    margin: 10px 15px;
+    background-color: #1a1a1a;
+    border: 2px solid #FF4500;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s, background-color 0.2s;
+    z-index: 2;
+}
+
+
+
+
